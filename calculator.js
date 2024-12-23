@@ -1,5 +1,6 @@
 
 const displayVal = document.getElementById('display');
+alert(displayVal.value); //empty string
 
 function Display(input) {
     displayVal.value += input;
@@ -7,7 +8,7 @@ function Display(input) {
 }
 
 function removeOneVal(){
-displayVal.value=displayVal.value.slice(0,-1); //remove the last elemen
+displayVal.value=displayVal.value.slice(0,-1); //remove the last element
 }
 
 function clearDisplay() {
