@@ -2,15 +2,12 @@
 const displayVal = document.getElementById('display');
 
 function Display(input) {
-    if (displayVal.value==="Error") {
-        displayVal.value='';
-    }
     displayVal.value += input;
     console.log(displayVal.value)
 }
 
 function removeOneVal(){
-displayVal.value=displayVal.value.slice(0,-1);
+displayVal.value=displayVal.value.slice(0,-1); //remove the last elemen
 }
 
 function clearDisplay() {
@@ -19,8 +16,12 @@ function clearDisplay() {
 }
 
 function calculate() {
+    if (displayVal.value==="Error") {
+        displayVal.value = "Error";
+        return;
+    }
     try {
-        displayVal.value=eval(displayVal.value);
+        displayVal.value=eval(displayVal.value); // Evaluate the mathematical expression
         console.log(displayVal.value)
     } catch (error) {
         displayVal.value="Error";
